@@ -58,7 +58,7 @@
             <div class="crt">
                 <div class="vista-container">
                     <h3> Vista frontal </h3>
-                    <canvas id="vista-frontal" width="500" height="300"></canvas>
+                    <canvas id="vista-frontal" width="500" height="600"></canvas>
                 </div>
                 <div class="vista-container">
                     <h3> Vista lateral </h3>
@@ -108,10 +108,6 @@
                             </span> V
                         </div>
                     </div>
-                </div>
-                
-                <div class="control-mode">
-                    <h3>Persistencia</h3>
                     <div class="slider-container">
                         <label for="persistencia">
                             Tiempo de persistencia:
@@ -124,6 +120,7 @@
                         </div>
                     </div>
                 </div>
+                                    
                 
                 <div class="control-group">
                     <h3>Modo</h3>
@@ -134,7 +131,7 @@
                 </div>
                 
                 <div class="control-group" id="controles-sinusoidales">
-                    <h3>Controles sinusoidales</h3>
+                    <h3>Modo sinusoidal</h3>
                     <div class="slider-container">
                         <label for="frequencyy">
                             Frecuencia en Y (Hz):
@@ -175,6 +172,6 @@
         </div>
     </div>
 
-    <script src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>
