@@ -167,9 +167,9 @@ function drawFrontView() {
     frontCtx.lineWidth = CONFIG.CANVAS.LINE_WIDTH;
     frontCtx.beginPath();
     frontCtx.rect(
-        centerX - scale, 
+        centerX - scale * 0.95, 
         centerY - scale * 0.75, 
-        scale * 2, 
+        scale * 1.9, 
         scale * 1.5
     );
     frontCtx.stroke();
