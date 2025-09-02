@@ -1,0 +1,137 @@
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #57C785;
+    background: linear-gradient(172deg, rgba(87, 199, 133, 1) 0%, rgba(177, 222, 196, 1) 66%, rgba(237, 237, 237, 1) 100%);
+}
+
+canvas {
+    background: #111;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+}
+
+.container {
+    padding-left: 16vw;
+    padding-right: 16vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+.sim-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%
+}
+
+header {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.logo {
+    width: 30%;
+}
+
+.logo img {
+    min-width: 7vw;
+    max-width: 10vw;
+    width: 100%;
+}
+
+header:nth-child(2) {
+    width: 60%;
+}
+
+.info-field {
+    font-weight: bold;
+}
+
+.info-data {
+    color: #484848;
+}
+
+.info-multiline {
+    display: flex;
+    width: 100%;
+    gap: 10%;
+}
+
+.info-multiline div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inforow {
+    margin-top: 0.3rem;
+}
+
+/* crt vistas */
+
+.crt {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.vista-container {
+    backdrop-filter: blur(100px);
+    background-color: rgba(255,255,255,0.1);
+    padding: 20px;
+    box-shadow: 0px 0px 3px 1px #5b5b5b;
+    border-radius: 20px;
+}
+
+.value-display, .control-value {
+    color: #660013;
+    font-weight: bolder;
+    text-align: end;
+}
+
+.slider-container {
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.slider-container input[type="range"] {
+    width: 100%;
+}
+
+.button-group {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.button-group button {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    border: 5px solid transparent;
+}
+
+.button-group button:hover {
+    border: 5px solid white;
+}
+
+@media (width < 950px) {
+    .container {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+@media (width < 700px) {
+    .sim-container {
+        display: flex;
+        flex-direction: column;
+    }
+}

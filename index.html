@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2-LAB-FF2018</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulación CRT</h1>
+            <span class="info-field">
+                        Universidad del Valle de Guatemala
+                    </span>
+            <div class="inforow">
+                    <span class="info-field">
+                        Curso:
+                    </span>
+                    <span class="info-data">
+                        Física 3
+                    </span>
+                </div>
+                <div class="inforow">
+                    <span class="info-field">
+                        Instructor de laboratorio:
+                    </span>
+                    <span class="info-data">
+                        Eduardo Álvarez 
+                    </span>
+                </div>
+                <div class="inforow">
+                    <span class="info-field">
+                        Integrantes:
+                    </span>
+                    <div class="info-multiline">
+                        <div>
+                            <span class="info-data">
+                                24248 Chavez Otzoy, Angel Gabriel 
+                            </span>
+                            <span class="info-data">
+                                24952 Castillo Lemus, Marcela Patricia  
+                            </span>
+                        </div>
+                        <div>
+                            <span class="info-data">
+                                24376 Rivera Barrera, José Leonel  
+                            </span>
+                            <span class="info-data">
+                                24730 López Arriaza, David Eduardo 
+                            </span>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        
+        <div class="sim-container">
+            <div class="crt">
+                <div class="vista-container">
+                    <h3> Vista frontal </h3>
+                    <canvas id="vista-frontal" width="500" height="300"></canvas>
+                </div>
+                <div class="vista-container">
+                    <h3> Vista lateral </h3>
+                    <canvas id="vista-lateral" width="500" height="200"></canvas>
+                </div>
+                <div class="vista-container">
+                    <h3> Vista superior </h3>
+                    <canvas id="vista-superior" width="500" height="200"></canvas>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <div class="control-mode">
+                    <h3>Voltajes</h3>
+                    <div class="slider-container">
+                        <label for="voltaje-aceleracion">
+                            Aceleración (V):
+                        </label>
+                        <input type="range" id="voltaje-aceleracion" min="500" max="5000" value="2000">
+                        <div class="control-value">
+                            <span id="valor-aceleracion">
+                                2000
+                            </span> V
+                        </div>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="voltaje-vertical">
+                            Voltaje vertical (V):
+                        </label>
+                        <input type="range" id="voltaje-vertical" min="-100" max="100" value="0">
+                        <div class="value-display">
+                            <span id="valor-vertical">
+                                0
+                            </span> V
+                        </div>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="voltaje-horizontal">
+                            Voltaje horizontal (V):
+                        </label>
+                        <input type="range" id="voltaje-horizontal" min="-100" max="100" value="0">
+                        <div class="value-display">
+                            <span id="valor-horizontal">
+                                0
+                            </span> V
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-mode">
+                    <h3>Persistencia</h3>
+                    <div class="slider-container">
+                        <label for="persistencia">
+                            Tiempo de persistencia:
+                        </label>
+                        <input type="range" id="persistencia" min="1" max="10" value="3">
+                        <div class="value-display">
+                            <span id="valor-persistencia">
+                                3
+                            </span> s
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Modo</h3>
+                    <div class="button-group">
+                        <button id="manual-btn">Manual</button>
+                        <button id="sin-btn">Sinusoidal</button>
+                    </div>
+                </div>
+                
+                <div class="control-group" id="controles-sinusoidales">
+                    <h3>Controles sinusoidales</h3>
+                    <div class="slider-container">
+                        <label for="frequencyy">
+                            Frecuencia en Y (Hz):
+                        </label>
+                        <input type="range" id="frequencyy" min="0.1" max="5" step="0.1" value="1">
+                        <div class="value-display">
+                            <span id="valor-frequencyy">
+                                1
+                            </span> Hz
+                        </div>
+                    </div>
+
+                    <div class="slider-container">
+                        <label for="frequencyx">
+                            Frecuencia en X (Hz):
+                        </label>
+                        <input type="range" id="frequencyx" min="0.1" max="5" step="0.1" value="1">
+                        <div class="value-display">
+                            <span id="valor-frequencyx">
+                                1
+                            </span> Hz
+                        </div>
+                    </div>
+                    
+                    <div class="slider-container">
+                        <label for="desfase">
+                            Desfase (rads):
+                        </label>
+                        <input type="range" id="desfase" min="0" max="6.28" step="0.1" value="0">
+                        <div class="value-display">
+                            <span id="valor-desfase">
+                                0
+                            </span> rad
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/main.js"></script>
+</body>
+</html>
