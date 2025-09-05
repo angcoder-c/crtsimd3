@@ -49,8 +49,13 @@ function calculateElectronPosition() {
         const wx = 2 * Math.PI * simulation.frequencyx;
         const o = simulation.phase;
         
-        verticalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wy * t);
-        horizontalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wx * t + o);
+        if (simulation.frequencyx === simulation.frequencyy) {
+            verticalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wy * t);
+            horizontalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wx * t + o);
+        } else {
+            verticalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wy * t + o);
+            horizontalVoltage = CONFIG.UI.SINUSOIDAL_AMPLITUDE * Math.sin(wx * t + o);
+        }
     }
     
     // calculo de posicion
